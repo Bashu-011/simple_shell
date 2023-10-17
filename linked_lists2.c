@@ -6,9 +6,9 @@
 *
 * Return: size of list
 */
-x_size list_len(const x_list *h)
+size_t list_len(const x_list *h)
 {
-x_size i = 0;
+size_t i = 0;
 
 while (h)
 {
@@ -27,7 +27,7 @@ return (i);
 char **list_to_strings(x_list *head)
 {
 x_list *node = head;
-x_size i = list_len(head), j;
+size_t i = list_len(head), j;
 char **strs;
 char *str;
 
@@ -61,9 +61,9 @@ return (strs);
 *
 * Return: size of list
 */
-x_size print_list(const x_list *h)
+size_t print_list(const x_list *h)
 {
-x_size i = 0;
+size_t i = 0;
 
 while (h)
 {
@@ -107,9 +107,9 @@ return (NULL);
 *
 * Return: key of node or -1
 */
-xx_size get_node_key(x_list *head, x_list *node)
+ssize_t get_node_key(x_list *head, x_list *node)
 {
-x_size i = 0;
+size_t i = 0;
 
 while (head)
 {

@@ -83,7 +83,7 @@ return (0);
 int populate_env_list(x_info *command)
 {
 x_list *node = NULL;
-x_size i;
+size_t i;
 
 for (i = 0; environ[i]; i++)
 add_node_end(&node, environ[i], 0);

@@ -27,7 +27,7 @@ return (command->environ);
 int _unsetenv(x_info *command, char *var)
 {
 x_list *node = command->env;
-x_size i = 0;
+size_t i = 0;
 char *p;
 
 if (!node || !var)

@@ -32,7 +32,7 @@ return (buf);
 */
 int write_history(x_info *command)
 {
-xx_size fil_desc;
+ssize_t fil_desc;
 char *filename = get_history_file(command);
 x_list *node = NULL;
 
@@ -62,7 +62,7 @@ return (1);
 int read_history(x_info *command)
 {
 int i, last = 0, linecounter = 0;
-xx_size fil_desc, rdlen, fsize = 0;
+ssize_t fil_desc, rdlen, fsize = 0;
 struct stat st;
 char *buf = NULL, *filename = get_history_file(command);
 

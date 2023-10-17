@@ -80,9 +80,9 @@ return (new_node);
 *
 * Return: size of list
 */
-x_size print_list_str(const x_list *h)
+size_t print_list_str(const x_list *h)
 {
-x_size i = 0;
+size_t i = 0;
 
 while (h)
 {

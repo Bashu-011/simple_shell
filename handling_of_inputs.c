@@ -8,10 +8,10 @@
 *
 * Return: bytes read
 */
-xx_size input_buf(x_info *command, char **buf, x_size *len)
+ssize_t input_buf(x_info *command, char **buf, size_t *len)
 {
-xx_size r = 0;
-x_size len_p = 0;
+ssize_t r = 0;
+size_t len_p = 0;
 
 if (!*len) /* if nothing left in the buffer, fill it */
 {
@@ -50,11 +50,11 @@ return (r);
 *
 * Return: bytes read
 */
-xx_size get_input(x_info *command)
+ssize_t get_input(x_info *command)
 {
 static char *buf;
-static x_size i, j, len;
-xx_size r = 0;
+static size_t i, j, len;
+ssize_t r = 0;
 char **buf_p = &(command->arg), *p;
 
 _putchar(BUF_FLUSH);
@@ -97,9 +97,9 @@ return (r);
 *
 * Return: r
 */
-xx_size read_buf(x_info *command, char *buf, x_size *i)
+ssize_t read_buf(x_info *command, char *buf, size_t *i)
 {
-xx_size r = 0;
+ssize_t r = 0;
 
 if (*i)
 return (0);
@@ -117,12 +117,12 @@ return (r);
 *
 * Return: s
 */
-int _getline(x_info *command, char **ptr, x_size *length)
+int _getline(x_info *command, char **ptr, size_t *length)
 {
 static char buf[READ_BUF_SIZE];
-static x_size i, len;
-x_size k;
-xx_size r = 0, s = 0;
+static size_t i, len;
+size_t k;
+ssize_t r = 0, s = 0;
 char *p = NULL, *new_p = NULL, *c;
 
 p = *ptr;
@@ -157,10 +157,10 @@ return (s);
 }
 
 /**
-* sigint_handler - checks on the copy function
+* sigint_handler - checks on the copy fn
 * @sig_num: signal number
 *
-* Return: none
+* Return: void
 */
 void sigint_handler(__attribute__((unused))int sig_num)
 {

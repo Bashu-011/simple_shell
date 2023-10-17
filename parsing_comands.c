@@ -8,9 +8,9 @@
 *
 * Return: 1 if chain delimeter, 0 otherwise
 */
-int ch_delim(x_info *command, char *buf, x_size *p)
+int ch_delim(x_info *command, char *buf, size_t *p)
 {
-x_size j = *p;
+size_t j = *p;
 
 if (buf[j] == '|' && buf[j + 1] == '|')
 {
@@ -45,9 +45,9 @@ return (1);
 *
 * Return: Void
 */
-void check_chain(x_info *command, char *buf, x_size *p, x_size i, x_size len)
+void check_chain(x_info *command, char *buf, size_t *p, size_t i, size_t len)
 {
-x_size j = *p;
+size_t j = *p;
 
 if (command->cmd_buf_type == CMD_AND)
 {
