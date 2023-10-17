@@ -80,7 +80,7 @@ return (0);
 }
 
 /**
-* my_helper – displays the current directory of the process
+* my_helper - displays the current directory of the process
 * @command: Structure containing potential arguments. Used to maintain
 *          constant function prototype.
 *  Return: Always 0

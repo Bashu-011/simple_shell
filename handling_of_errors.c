@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
-* _errs2int – changes a string to an integer
+* _errs2int - changes a string to an integer
 * @s: the string to be converted
 * Return: 0 if no numbers in a string
 * else -1 on error
